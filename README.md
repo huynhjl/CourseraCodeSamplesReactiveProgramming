@@ -1,5 +1,5 @@
-Coursera Principles of Reactive Programming Samples
-===================================================
+Coursera Principles of Reactive Programming Samples: Futures & Promises, Rx
+---------------------------------------------------------------------------
 
 /Adventure contains the sample code for the "adventure game" lessons.
 It introduces the `Try[T]` monad that makes failure explicit.
