@@ -104,4 +104,32 @@ package object Extensions {
     await{ selector(x) }: S
   }
 
+  def race[T](left: Future[T], right: Future[T])(implicit executor: ExecutionContext): Future[T] = {
+    val p = Promise[T]()
+
+    left  onComplete { p.tryComplete }
+    right onComplete { p.tryComplete }
+
+    p.future
+  }
+
+  def zipI[T, S, R](future: Future[T], other: Future[S], combine: (T, S) => R)
+                  (implicit executor: ExecutionContext): Future[R] = async {
+    combine(await{ future }: T, await{ other }: S)
+  }
+
+  def zipII[T, S, R](future: Future[T], other: Future[S], combine: (T, S) => R)
+                  (implicit executor: ExecutionContext): Future[R] = {
+    val p = Promise[R]()
+
+    future onComplete {
+      case Failure(f) => { p.failure(f) }
+      case Success(t) => { other onComplete {
+        case Failure(f) => { p.failure(f) }
+        case Success(s) => p.success(combine(t,s))
+      }}
+    }
+
+    p.future
+  }
 }
