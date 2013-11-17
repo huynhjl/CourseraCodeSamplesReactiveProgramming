@@ -14,8 +14,8 @@ package object Extensions {
 
   }
 
-  def f[T](that: Future[T]): PartialFunction[Throwable, Future[T]] = { case _: Throwable => that }
-  def g[T]: PartialFunction[Throwable, Failure[T]] = { case t: Throwable => Failure(t) }
+  def f[T](that: Future[T]): PartialFunction[Throwable, Future[T]]  = { case _: Throwable => that }
+  def g[T]:                  PartialFunction[Throwable, Failure[T]] = { case t: Throwable => Failure(t) }
 
   implicit class FutureExtensions[T](val future: Future[T]) extends AnyVal {
 
@@ -28,8 +28,12 @@ package object Extensions {
     }
   }
 
-  def fallbackTo[U](source: Future[U], that: =>Future[U])(implicit executor: ExecutionContext): Future[U] = {
-      source.recoverWith { case _: Throwable => that.recoverWith {  case _: Throwable => source } }
+  def withTry[T](future: Future[T])(implicit executor: ExecutionContext): Future[Try[T]] = {
+    future.map(Success(_)) recover { case t: Throwable => Failure(t) }
+  }
+
+  def fallbackTo[U](future: Future[U], that: =>Future[U])(implicit executor: ExecutionContext): Future[U] = {
+    future.recoverWith { case _: Throwable => that.recoverWith {  case _: Throwable => future } }
   }
 
 }
