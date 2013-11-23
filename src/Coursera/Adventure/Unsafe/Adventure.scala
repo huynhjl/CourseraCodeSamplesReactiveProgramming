@@ -1,9 +1,9 @@
-package Coursera.Adventure.Unsafe
+package coursera.adventure.unsafe
 
-import Coursera.Adventure._
-import Coursera.Adventure.Silver
-import Coursera.Adventure.Gold
-import Coursera.Extensions
+import coursera.adventure._
+import coursera.adventure.Silver
+import coursera.adventure.Gold
+import coursera.extensions
 
 object Adventure {
   def apply(): Adventure = new Adventure(){
@@ -13,7 +13,7 @@ object Adventure {
 }
 
 trait Adventure {
-  import Extensions._
+  import extensions._
 
   var eatenByMonster: Boolean
   val treasureCost: Integer

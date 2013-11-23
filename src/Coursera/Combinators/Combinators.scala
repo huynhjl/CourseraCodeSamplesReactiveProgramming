@@ -1,11 +1,11 @@
-package Coursera
+package coursera
 
 import scala.concurrent.{Promise, ExecutionContext, Future}
 import scala.async.Async._
 import scala.util.{Success, Failure, Try}
-import Coursera.Extensions._
+import coursera.extensions._
 
-package object Combinators {
+package object combinators {
 
   def retryI[T](n: Integer)(block: =>Future[T]): Future[T] = {
     if (n == 0) {

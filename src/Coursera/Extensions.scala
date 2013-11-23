@@ -1,10 +1,10 @@
-package Coursera
+package coursera
 
 import scala.concurrent.{Promise, ExecutionContext, Future}
 import scala.util.{Failure, Success, Try}
 import scala.async.Async._
 
-package object Extensions {
+package object extensions {
 
   implicit class ListExtensions[T](val source: List[T]) extends AnyVal {
     def sumBy(keySelector: T => Integer): Integer = ???
@@ -30,6 +30,7 @@ package object Extensions {
   }
 
   def withTry[T](future: Future[T])(implicit executor: ExecutionContext): Future[Try[T]] = {
+    future.
     future.map(Success(_)) recover { case t: Throwable => Failure(t) }
   }
 

@@ -1,4 +1,4 @@
-package Coursera.Socket.Unsafe
+package coursera.socket.unsafe
 
 object Socket {
   def apply(): Socket = new Socket(){

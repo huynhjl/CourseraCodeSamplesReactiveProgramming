@@ -1,8 +1,8 @@
-package Coursera.Adventure.Safe
+package coursera.adventure.safe
 
-import Coursera.Adventure._
-import Coursera.Adventure.Silver
-import Coursera.Adventure.Gold
+import coursera.adventure._
+import coursera.adventure.Silver
+import coursera.adventure.Gold
 import scala.util.{Failure, Success, Try}
 
 object Adventure {

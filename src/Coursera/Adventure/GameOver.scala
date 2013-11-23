@@ -1,4 +1,4 @@
-package Coursera.Adventure
+package coursera.adventure
 
 /**
  * Created with IntelliJ IDEA.

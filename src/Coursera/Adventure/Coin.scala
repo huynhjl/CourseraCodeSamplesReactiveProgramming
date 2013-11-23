@@ -1,4 +1,4 @@
-package Coursera.Adventure
+package coursera.adventure
 
 class Coin(val Value: Integer){}
 
