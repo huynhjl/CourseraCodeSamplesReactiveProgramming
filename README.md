@@ -1,4 +1,4 @@
-Coursera Principles of Reactive Programming Samples: Futures & Promises, Rx
+coursera Principles of Reactive Programming Samples: Futures & Promises, Rx
 ---------------------------------------------------------------------------
 
 /Adventure contains the sample code for the "adventure game" lessons.
