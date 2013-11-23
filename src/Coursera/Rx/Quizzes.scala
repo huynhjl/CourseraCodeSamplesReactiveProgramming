@@ -1,12 +1,7 @@
 package coursera.rx
 
-/**
- * Created with IntelliJ IDEA.
- * User: netflix
- * Date: 11/23/13
- * Time: 3:22 PM
- * To change this template use File | Settings | File Templates.
- */
+import rx.lang.scala.Observable
+
 object Quizzes {
   def quizI(): Unit = {
 
