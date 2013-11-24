@@ -1,6 +1,6 @@
 import coursera.adventure.unsafe.Adventure
-import coursera.rx.{Nested, Quizzes}
-import coursera.usgs.Usgs
+import coursera.rx.{EarthQuakes, Nested, Quizzes}
+import coursera.usgs.{Magnitude, Usgs}
 
 object Main {
   def main(args: Array[String]): Unit = {
@@ -8,7 +8,9 @@ object Main {
     // Quizzes.quizI()
     // Nested.flattenNestedStreams()
     // Nested.concatenateNestedStreams()
-    // Usgs().subscribe(println(_))
+    // EarthQuakes.quakes().subscribe(println(_))
+    // EarthQuakes.major().subscribe(println(_))
+    EarthQuakes.ofMagnitude(Magnitude.Minor).subscribe(println(_))
   }
 
 }
