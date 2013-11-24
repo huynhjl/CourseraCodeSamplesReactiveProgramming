@@ -3,6 +3,7 @@ package coursera.rx
 import rx.lang.scala.Observable
 
 object Quizzes {
+
   def quizI(): Unit = {
 
     val xs = Observable(Range(1,10).inclusive)

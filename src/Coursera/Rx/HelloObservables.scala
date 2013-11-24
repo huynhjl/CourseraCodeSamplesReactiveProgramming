@@ -23,19 +23,7 @@ object HelloObservables {
 
 }
 
-object Nested {
 
-  def flattenNestedStreams(): Unit = {
-
-    val xs: Observable[Int]              = Observable(3,2,1)
-    val yss: Observable[Observable[Int]] = xs.map(x => Observable.interval(x seconds).map(_ => x).take(2))
-    val zs = yss.flatten
-
-    println(zs.toBlockingObservable.toList.equals(List(1,2,1,3,2,3)))
-
-  }
-
-}
 
 
 

@@ -18,6 +18,7 @@
     <orderEntry type="library" name="scala-library" level="application" />
     <orderEntry type="library" name="akka" level="project" />
     <orderEntry type="library" name="RxJava 0.15.0" level="application" />
+    <orderEntry type="library" name="com.squareup.retrofit:retrofit:1.2.2" level="application" />
   </component>
 </module>
 
