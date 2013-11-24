@@ -10,7 +10,7 @@ object Main {
     // Nested.concatenateNestedStreams()
     // EarthQuakes.quakes().subscribe(println(_))
     // EarthQuakes.major().subscribe(println(_))
-    EarthQuakes.ofMagnitude(Magnitude.Minor).subscribe(println(_))
+    // EarthQuakes.ofMagnitude(Magnitude.Minor).subscribe(println(_))
   }
 
 }
