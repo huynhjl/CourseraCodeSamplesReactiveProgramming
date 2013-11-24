@@ -17,7 +17,7 @@ object Usgs {
     restAdapter.create(classOf[Usgs]).get(new Callback[FeatureCollection] {
 
       def failure(error: RetrofitError): Unit = {
-        subject.onError(new Exception(error.getBodyAs(classOf[String]).asInstanceOf[String]))
+        subject.onError(error.getCause)
       }
 
       def success(t: FeatureCollection, response: Response): Unit = {

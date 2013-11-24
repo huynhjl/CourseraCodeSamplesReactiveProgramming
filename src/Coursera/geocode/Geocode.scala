@@ -1,17 +1,17 @@
 package coursera.geocode
 
-import retrofit.http.{Path, GET}
+import retrofit.http.{Query, Path, GET}
 import retrofit.{RetrofitError, RestAdapter, Callback}
 import scala.concurrent.{Promise, Future}
 import retrofit.client.Response
 import coursera.usgs.Point
 
-object Geocode {
+object ReverseGeocode {
 
   private val restAdapter = new RestAdapter.Builder().setServer("http://ws.geonames.org").build()
 
   def apply(point: Point): Future[CountrySubdivision] = {
-    Geocode(point.latitude, point.longitude)
+    ReverseGeocode(point.latitude, point.longitude)
   }
 
   def apply(latitude: Double, longitude: Double): Future[CountrySubdivision] = {
@@ -20,10 +20,10 @@ object Geocode {
 
     val promise = Promise[CountrySubdivision]()
 
-    restAdapter.create(classOf[Gecode]).get(latitude, longitude, new Callback[CountrySubdivision] {
+    restAdapter.create(classOf[ReverseGeocode]).get(latitude, longitude, new Callback[CountrySubdivision] {
 
       def failure(error: RetrofitError): Unit = {
-        promise.failure(new Exception(error.getBodyAs(classOf[String]).asInstanceOf[String]))
+        promise.failure(error.getCause)
       }
 
       def success(t: CountrySubdivision, response: Response): Unit = {
@@ -36,7 +36,7 @@ object Geocode {
   }
 }
 
-private trait Gecode {
-  @GET("/countrySubdivisionJSON?lat={lat}&lng={lng}")
-  def get(@Path("lat")latitude: Double, @Path("lng")longitude: Double, callback: Callback[CountrySubdivision])
+private trait ReverseGeocode {
+  @GET("/countrySubdivisionJSON")
+  def get(@Query("lat")latitude: Double, @Query("lng")longitude: Double, callback: Callback[CountrySubdivision])
 }
