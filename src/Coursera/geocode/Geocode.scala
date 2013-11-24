@@ -2,7 +2,7 @@ package coursera.geocode
 
 import retrofit.http.{Query, Path, GET}
 import retrofit.{RetrofitError, RestAdapter, Callback}
-import scala.concurrent.{Promise, Future}
+import scala.concurrent.{ExecutionContext, Promise, Future}
 import retrofit.client.Response
 import coursera.usgs.Point
 
