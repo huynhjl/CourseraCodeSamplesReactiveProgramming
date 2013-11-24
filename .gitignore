@@ -1,1 +1,4 @@
 target/
+/.cache
+/.settings/
+/lib_managed/

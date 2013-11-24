@@ -8,6 +8,14 @@ scalacOptions ++= Seq("-deprecation", "-feature", "-language:postfixOps")
 
 scalaSource in Compile <<= baseDirectory / "src"
 
+scalaSource in Test <<= baseDirectory / "test/src"
+
+javaSource in Compile <<= baseDirectory / "java"
+
+javaSource in Test <<= baseDirectory / "test/java"
+
+retrieveManaged := true
+
 resolvers += "Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/"
 
 libraryDependencies ++= Seq(
