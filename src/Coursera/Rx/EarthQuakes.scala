@@ -6,7 +6,6 @@ import coursera.usgs.{Point, Usgs, Feature, Magnitude}
 import coursera.usgs.Magnitude.Magnitude
 import coursera.geocode.{ReverseGeocode, CountrySubdivision}
 import scala.concurrent.{ExecutionContext, Future}
-import rx.lang.scala.subjects.AsyncSubject
 import ExecutionContext.Implicits.global
 
 object EarthQuakes {
@@ -28,6 +27,7 @@ object EarthQuakes {
     flatten(quakes().map(quake => {
       val country: Future[CountrySubdivision] = ReverseGeocode(quake.geometry)
       ToObservable(country.map(country => (quake,country)))
+         .filter{ case(quake, country) => country.countryName != null }
     }))
   }
 
@@ -38,31 +38,12 @@ object EarthQuakes {
   def withCountryConcatenated(): Observable[(Feature, CountrySubdivision)] = {
     withCountry(xss => xss.concat)
   }
+
+  def groupedByCountry(): Observable[(String, Observable[(Feature, CountrySubdivision)])] = {
+    withCountryMerged().groupBy{ case (quake, country) => country.countryName }
+  }
 }
 
-object ToObservable {
 
-   def apply[T](future: Future[T]): Observable[T] = {
-
-     import ExecutionContext.Implicits.global
-
-     val subject = AsyncSubject[T]()
-
-     future.onSuccess{
-       case s => {
-        subject.onNext(s);
-        subject.onCompleted()
-        }
-     }
-
-     future.onFailure{
-       case e => {
-        subject.onError(e)
-       }
-     }
-
-     subject
-   }
-}
 
 

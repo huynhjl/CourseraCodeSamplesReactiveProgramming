@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ee36ef9-e888-4eb4-a8de-39582803ea27" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/coursera/geocode/Geocode.scala" afterPath="$PROJECT_DIR$/src/coursera/geocode/Geocode.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.scala" afterPath="$PROJECT_DIR$/src/Main.scala" />
+    <list default="true" id="9ee36ef9-e888-4eb4-a8de-39582803ea27" name="Default" comment="Filtering out countries without reverse geocode information.">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/highlighting.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/akka.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scala_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/coursera/rx/EarthQuakes.scala" afterPath="$PROJECT_DIR$/src/coursera/rx/EarthQuakes.scala" />
     </list>
     <ignored path="CourseraCodeSamplesReactiveProgramming.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="9ee36ef9-e888-4eb4-a8de-39582803ea27" time="1385267088683" ignored="false" />
+    <file path="/Dummy.txt" changelist="9ee36ef9-e888-4eb4-a8de-39582803ea27" time="1385267900707" ignored="false" />
     <file path="/Main.scala" changelist="9ee36ef9-e888-4eb4-a8de-39582803ea27" time="1385267232226" ignored="false" />
     <file path="/fragment.java" changelist="9ee36ef9-e888-4eb4-a8de-39582803ea27" time="1385266674907" ignored="false" />
     <file path="/Adventure.scala" changelist="9ee36ef9-e888-4eb4-a8de-39582803ea27" time="1385246560795" ignored="false" />
@@ -234,10 +243,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Subscriptions.scala" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Subscriptions.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/coursera/rx/Subscriptions.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="34" selection-start="47" selection-end="47" vertical-scroll-proportion="0.16411379">
+            <state line="5" column="31" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="178" column="82" selection-start="24835" selection-end="24835" vertical-scroll-proportion="0.30405405">
               <folding />
             </state>
           </provider>
@@ -303,15 +321,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Future.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../scala-2.10.2/src/scala-library-src.jar!/scala/concurrent/Future.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="135" column="6" selection-start="4955" selection-end="4955" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -334,7 +343,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/coursera/rx/Quizzes.scala" />
         <option value="$PROJECT_DIR$/src/coursera/bindings/EarthQuake.scala" />
         <option value="$PROJECT_DIR$/src/coursera/bindings/FeatureCollection.scala" />
         <option value="$PROJECT_DIR$/src/coursera/usgs/FeatureCollection.scala" />
@@ -350,6 +358,7 @@
         <option value="$PROJECT_DIR$/src/coursera/rx/ToObservable.scala" />
         <option value="$PROJECT_DIR$/src/Main.scala" />
         <option value="$PROJECT_DIR$/src/coursera/rx/EarthQuakes.scala" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
       </list>
     </option>
   </component>
@@ -461,6 +470,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="rx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CourseraCodeSamplesReactiveProgramming" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CourseraCodeSamplesReactiveProgramming" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -893,12 +916,16 @@
       <created>1385267091787</created>
       <updated>1385267091787</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Filtering out countries without reverse geocode information.">
+      <created>1385267621777</created>
+      <updated>1385267621777</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="1024" y="63" width="1920" height="1174" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -915,7 +942,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13333334" sideWeight="0.44949028" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13333334" sideWeight="0.44949028" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.55050975" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -965,7 +992,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added IntelliJ files (not sure if those are needed, just in case)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Filtering out countries without reverse geocode information." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -997,6 +1024,7 @@
     <MESSAGE value="Earthquakes with country" />
     <MESSAGE value="Moved ToObservable to own file" />
     <MESSAGE value="Added IntelliJ files (not sure if those are needed, just in case)" />
+    <MESSAGE value="Filtering out countries without reverse geocode information." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1006,13 +1034,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/../WikipediaSuggest/lib/retrofit-1.2.2-sources.jar!/retrofit/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="0" selection-start="3281" selection-end="3281" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../WikipediaSuggest/lib/retrofit-1.2.2-sources.jar!/retrofit/CallbackRunnable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="54" column="17" selection-start="1813" selection-end="1813" vertical-scroll-proportion="0.0">
@@ -1136,7 +1157,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/coursera/rx/Subscriptions.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="34" selection-start="47" selection-end="47" vertical-scroll-proportion="0.16411379">
+        <state line="5" column="31" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="178" column="82" selection-start="24835" selection-end="24835" vertical-scroll-proportion="0.30405405">
           <folding />
         </state>
       </provider>
