@@ -13,7 +13,7 @@ object Main {
     // EarthQuakes.ofMagnitude(Magnitude.Minor).subscribe(println(_))
     // EarthQuakes.withCountryMerged().subscribe(println(_), e => println(e.getMessage), () => println(">>>>>>"))
     // EarthQuakes.withCountryConcatenated().subscribe(println(_), e => println(e.getMessage), () => println(">>>>>>"))
-    EarthQuakes.groupedByCountry().subscribe(println(_), e => println(e.getMessage), () => println(">>>>>>"))
+    //EarthQuakes.groupedByCountry().subscribe(println(_), e => println(e.getMessage), () => println(">>>>>>"))
   }
 
 }
