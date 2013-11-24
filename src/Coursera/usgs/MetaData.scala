@@ -13,7 +13,7 @@ class MetaData {
   val url: String          = null
   val title: String        = null
   val api: String          = null
-  var count: Integer       = 0
+  val count: Integer       = 0
   val status: Integer      = 0
 
   override def toString() = s"{ 'generated': '$generated', 'url':'$url', 'title':'$title', 'api': '$api', 'count': '$count', 'status': '$status' }";
