@@ -6,7 +6,6 @@ import rx.lang.scala.Observable
 import rx.lang.scala.subjects.AsyncSubject
 import retrofit.client.Response
 
-
 class Feature {
 
   val properties : Properties = null

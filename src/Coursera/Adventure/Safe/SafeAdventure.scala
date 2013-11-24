@@ -1,8 +1,6 @@
 package coursera.adventure.safe
 
 import coursera.adventure._
-import coursera.adventure.Silver
-import coursera.adventure.Gold
 import scala.util.{Failure, Success, Try}
 
 object Adventure {

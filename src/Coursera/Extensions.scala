@@ -1,8 +1,7 @@
 package coursera
 
-import scala.concurrent.{Promise, ExecutionContext, Future}
+import scala.concurrent.{ExecutionContext, Future}
 import scala.util.{Failure, Success, Try}
-import scala.async.Async._
 
 package object extensions {
 

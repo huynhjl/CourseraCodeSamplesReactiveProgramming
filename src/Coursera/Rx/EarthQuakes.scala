@@ -8,6 +8,7 @@ import coursera.geocode.{ReverseGeocode, CountrySubdivision}
 import scala.concurrent.{ExecutionContext, Future}
 import ExecutionContext.Implicits.global
 
+
 object EarthQuakes {
 
   def quakes(): Observable[Feature] = Usgs()

@@ -1,6 +1,5 @@
 package coursera.geocode
 
-
 class CountrySubdivision {
   val countryCode: String = null
   var countryName: String = null
